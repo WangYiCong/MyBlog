@@ -1,3 +1,4 @@
+// 表单验证函数
 function validate(el, modifiers, bindingValue) {
     bindingValue = bindingValue && typeof bindingValue === 'object' ? bindingValue : {}
     const value = typeof el.value === 'string' ? el.value.trim() : ''
@@ -62,6 +63,14 @@ function validate(el, modifiers, bindingValue) {
   }
   
   export default {
+  // 钩子函数
+  // v-validator:input.required="{ regex: /^[a-zA-Z]+\w*\s?\w*$/, error: '用户名要求以字母开头的单词字符' }"
+  /*
+    binding.name就是validator
+    bindomg.value就是{ regex: /^[a-zA-Z]+\w*\s?\w*$/, error: '用户名要求以字母开头的单词字符' }
+    binding.expression就是
+    binding.arg就是required
+  */
     bind(el, binding, vnode) {
       const { value, arg, modifiers } = binding
       const eventType = ['change', 'blur', 'input'].indexOf(arg) !== -1 ? arg : 'change'

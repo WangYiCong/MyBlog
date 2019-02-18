@@ -116,6 +116,7 @@ export default {
 </script>
 
 <style scoped>
+/* 验证码图片的样式 */
   .thumbnail { width: 170px; margin-top: 10px; cursor: pointer;}
   .thumbnail .captcha { height: 46px; background: #E1E6E8;}
   .captcha { font-size: 24px; font-weight: bold; user-select: none;}
