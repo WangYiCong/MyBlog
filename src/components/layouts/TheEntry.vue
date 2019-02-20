@@ -62,5 +62,7 @@ export default {
 </script>
 
 <style scoped>
-
+  .topnav .github-login .btn.login-btn {
+      margin-top: 12px;
+    }
 </style>

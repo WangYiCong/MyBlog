@@ -80,5 +80,14 @@ export default {
 </script>
 
 <style scoped>
-
+  .panel .panel-heading h3{
+    color: #2aaaff;
+    font-size: 20px;
+    
+  }
+  .btn-success{
+    background-color: #2aaaff;
+    border: #2aaaff;
+    letter-spacing: 10px;
+  }
 </style>

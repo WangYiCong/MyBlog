@@ -18,16 +18,12 @@
 
         <div class="col-sm-6 col-lg-6 col-lg-offset-1">
           <div class="row">
+            <!-- 官方微信 -->
             <div class="col-sm-4">
               <h4>{{ sponsor.title }}</h4>
-
-              <ul class="list-unstyled">
-                <li v-for="item in sponsor.list">
-                  <a :href="item.link" target="_blank">
-                    <img v-title="item.title" :src="item.logo" :alt="item.title" class="footer-sponsor-link" width="98">
-                  </a>
-                </li>
-              </ul>
+              <a :href="sponsor.list.link" target="_blank">
+                <img :src="sponsor.list.logo" :alt="sponsor.list.title" class="footer-sponsor-link" width="98">
+              </a>
             </div>
 
             <div class="col-sm-4">
@@ -65,63 +61,46 @@ export default {
     },
   data() {
     return {
-      description: 'VuejsCaff 是一个 Vue.js 的知识社区',
+      description: '智能拐杖是一个为老人服务的机构',
       contacts: [
         {
           icon: 'envelope',
           title: '反馈问题',
-          link: 'mailto:summer@yousails.com'
+          link: 'mailto:zngz@163.com'
         },
         {
           icon: 'weibo',
-          title: '站长微博',
-          link: 'https://weibo.com/1837553744/profile?topnav=1&wvr=6'
+          title: '机构微博',
+          link: 'https://weibo.com/'
         },
         {
           icon: 'weixin',
           title: '加我微信',
-          link: 'https://vuejscaff.com/contact'
+          link: '#'
         }
       ],
       contactStyle: {
-        paddingRight: '8px'
+        paddingRight: '8px'     
       },
       designer: `
         <span style="font-size:0.9em">Designed by
-          <span style="color: #e27575;font-size: 14px;">❤</span>
-          <a href="https://github.com/summerblue"target="_blank"style="color:inherit">WangYiCong</a>
+          <span style="color: #e27575;font-size: 14px;">★</span>
+          <a href="https://github.com/wangyicong"target="_blank"style="color:inherit">WangYiCong</a>
         </span>
       `,
       sponsor: {
-        title: '赞助商',
-        list: [
-          {
-            logo: 'https://lccdn.phphub.org/uploads/banners/bQawWl3vT5dc2lYx5JZ7.png',
-            title: '本站服务器由 UCloud 赞助',
-            link: 'http://www.ucloud.cn/?utm_source=zanzhu&utm_campaign=phphub&utm_medium=display&utm_content=yejiao&ytag=phphubyejiao'
-          },
-          {
-            logo: 'https://lccdn.phphub.org/uploads/banners/yGLIR0idW7zsInjsNmzr.png',
-            title: '本站 CDN 服务由七牛赞助',
-            link: 'http://www.qiniu.com/?utm_source=phphub'
-          },
-          {
-            logo: 'https://lccdn.phphub.org/uploads/banners/XPtLlZmIN1cQbLuDFEON.png',
-            title: 'Composer 镜像赞助商',
-            link: 'https://www.upyun.com/'
-          },
-          {
-            logo: 'https://lccdn.phphub.org/uploads/banners/JpTCK6OKYBIrBIWdtob8.png',
-            title: '订阅邮件赞助商：SendCloud',
-            link: 'http://www.sendcloud.net/'
-          }
-        ]
+        title: '官方微信',
+        list: {
+            logo: 'https://wx1.sinaimg.cn/mw690/007d7DTvgy1g0c7dbfu63j30gb0gd0wv.jpg',
+            title: '官方微信',
+            link: '#'
+        }
       },
       statistics: {
         title: '统计信息',
         list: [
           {
-            title: '社区会员',
+            title: '网站会员',
             description: '22889'
           },
           {
@@ -135,17 +114,17 @@ export default {
         ]
       },
       other: {
-        title: '其他信息',
+        title: '关于我们',
         list: [
           {
             icon: 'thumbs-up',
-            title: '软件外包服务',
-            link: 'https://vuejscaff.com/contact'
+            title: '机构服务',
+            link: '#'
           },
           {
             icon: 'globe',
-            title: '推荐网站',
-            link: 'https://vuejscaff.com/sites'
+            title: '合作商',
+            link: '#'
           }
         ]
       }
@@ -156,4 +135,7 @@ export default {
 
 <style scoped>
 a:hover, a:focus { color: #e27575; transition: color .15s;}
+.padding-top-xsm{
+  font-size: 20px;
+}
 </style>

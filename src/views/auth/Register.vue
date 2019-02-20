@@ -120,4 +120,13 @@ export default {
   .thumbnail { width: 170px; margin-top: 10px; cursor: pointer;}
   .thumbnail .captcha { height: 46px; background: #E1E6E8;}
   .captcha { font-size: 24px; font-weight: bold; user-select: none;}
+  .btn-success{
+    background-color: #2aaaff;
+    border: #2aaaff;
+    letter-spacing: 10px;
+  }
+  .panel .panel-heading h3{
+    color: #2aaaff;
+    font-size: 20px;
+  }
 </style>

@@ -43,16 +43,16 @@ export default {
   data() {
     return {
       logo: {
-        src: `${this.uploadsUrl}sites/ByvFbNlQYVwhvTyBgLdqitchoacDNznN.jpg`,
-        title: 'VuejsCaff'
+        src: `${this.uploadsUrl}mw690/007d7DTvgy1g02d9sjo8mj305301o3yi.jpg`,
+        title: '智能拐杖'
       },
-      navList: ['社区', '头条', '问答', '教程'],
+      navList: ['首页', '产品介绍','项目介绍', '定位地图', '关于我们'],
       activeNavIndex: 0,
       showCollapsedNav: false
     }
   },
   beforeCreate() {
-    this.uploadsUrl = 'https://vuejscaffcdn.phphub.org/uploads/'
+    this.uploadsUrl = 'https://wx2.sinaimg.cn/'
   },
   methods: {
     changeNavIndex(index) {
@@ -68,4 +68,8 @@ export default {
 <style scoped>
 .title { display: none;}
 .navbar-default .navbar-nav > .active > a { background: rgba(0,0,0,.03);}
+.navbar-default{
+  border-top: 0px;
+}
+
 </style>
